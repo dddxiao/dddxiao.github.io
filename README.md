@@ -1,39 +1,40 @@
-# David Xiao — Profile Site
+# David Xiao — Executive Profile Site
 
-A static personal profile / résumé site. No build step: plain HTML + CSS.
+Live at **https://dddxiao.github.io**. A static site with no build step and no framework.
+GitHub Pages serves the `main` branch from the repository root.
 
 | File | Purpose |
 |---|---|
-| `index.html` | All page content (edit text here) |
-| `style.css` | Look and feel (accent color is `--accent` at the top) |
-| `David-Xiao-Resume.pdf` | Downloadable résumé (exported from `David-Xiao-Resume.docx`) |
+| `index.html` | All page content, SEO and Open Graph tags, structured data |
+| `style.css` | Design: palette tokens at the top (light + dark), layout, print styles |
+| `main.js` | ~2 KB of optional enhancements: mobile menu, active-section nav, scroll reveals, count-up metrics. The page works fully without it. |
+| `David-Xiao-Resume.pdf` | Downloadable résumé (exported from the Word file) |
+| `og-image.png` | 1200×627 preview image shown when the link is shared on LinkedIn |
+| `robots.txt`, `sitemap.xml` | Search-engine hints |
 
 ## Preview locally
-Double-click `index.html`, or run `start index.html` in this folder.
+Double-click `index.html`.
 
-## Publish on GitHub Pages
-1. Sign in at https://github.com (create a free account if needed).
-2. Create a new **public** repository named exactly `<your-username>.github.io`
-   (leave "Add a README" unchecked).
-3. In this folder run:
-   ```
-   git remote add origin https://github.com/<your-username>/<your-username>.github.io.git
-   git push -u origin main
-   ```
-   The first push opens a browser window to sign in to GitHub.
-4. In the repo on GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch**,
-   branch `main`, folder `/ (root)` → Save.
-5. After 1–2 minutes the site is live at `https://<your-username>.github.io`.
+## Add your profile photo
+1. Crop a headshot to portrait 4:5 (e.g. 800×1000 px) and compress it to under 100 KB
+   (e.g. with https://squoosh.app, using MozJPEG at quality ~75).
+2. Save it as `images/david-xiao.jpg`.
+3. In `index.html`, find the `PHOTO:` comment in the hero and replace the
+   `<div class="portrait-frame">…</div>` block with the `<img>` line given in that comment.
 
-## Updating later
-Edit the files, then:
+## Publish changes
 ```
 git add -A
 git commit -m "Update profile"
 git push
 ```
-To refresh the PDF, export the Word résumé to PDF with the same file name.
+Live in about a minute.
+
+## Refresh the LinkedIn preview
+LinkedIn caches previews. After changing `og-image.png` or the title or description, paste the URL into
+https://www.linkedin.com/post-inspector/ to refresh it.
 
 ## Optional: custom domain
-Buy a domain (e.g. davidxiao.ca), then in **Settings → Pages → Custom domain** enter it and
-follow GitHub's DNS instructions.
+Buy a domain (e.g. davidxiao.ca), then in **Settings → Pages → Custom domain** enter it and follow
+GitHub's DNS instructions. Then update the `https://dddxiao.github.io/` URLs in `index.html`,
+`robots.txt` and `sitemap.xml`.
