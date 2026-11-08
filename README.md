@@ -15,12 +15,10 @@ GitHub Pages serves the `main` branch from the repository root.
 ## Preview locally
 Double-click `index.html`.
 
-## Add your profile photo
-1. Crop a headshot to portrait 4:5 (e.g. 800×1000 px) and compress it to under 100 KB
-   (e.g. with https://squoosh.app, using MozJPEG at quality ~75).
-2. Save it as `images/david-xiao.jpg`.
-3. In `index.html`, find the `PHOTO:` comment in the hero and replace the
-   `<div class="portrait-frame">…</div>` block with the `<img>` line given in that comment.
+## Change the profile photo
+Overwrite `images/david-xiao.jpg` with a square or portrait headshot under 100 KB
+(e.g. compress with https://squoosh.app, MozJPEG at quality ~75). The page crops it to 4:5.
+If the new image isn't 550×550, update the `width`/`height` on the `<img>` in the hero of `index.html`.
 
 ## Publish changes
 ```

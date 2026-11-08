@@ -137,6 +137,7 @@ main:focus { outline: none; }
   position: relative; aspect-ratio: 4 / 5; width: 100%; border-radius: 22px; object-fit: cover;
   box-shadow: 18px 18px 0 -1px var(--bronze-soft), var(--shadow);
 }
+.portrait-img { display: block; height: auto; object-position: 50% 30%; background: var(--bronze-soft); }
 .portrait-frame {
   display: grid; place-items: center; overflow: hidden;
   background:

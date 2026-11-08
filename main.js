@@ -1,5 +1,8 @@
 // Small progressive enhancements. The page is fully usable without this file.
 (function () {
+  // Turn on the scroll-reveal styles only once this script is actually running, so the
+  // page never stays hidden if the script fails to load.
+  document.documentElement.classList.add('js');
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nav = document.querySelector('.nav');
   var btn = document.querySelector('.menu-btn');
